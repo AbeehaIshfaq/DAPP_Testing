@@ -4,7 +4,7 @@ require("@nomicfoundation/hardhat-toolbox");
 const dotenv = require("dotenv");
 dotenv.config({path:".env"});
 
- const RINKEBY_RPC_URL = 'https://goerli.infura.io/v3/404f5e8f74d741c9be12cf95aa81a782'; 
+ const RINKEBY_RPC_URL = 'https://goerli.infura.io/v3/5313ed07668d403793c5d4a97858c9f0'; 
 
  const PRIVATE_KEY = '4f7a793f9974e90936c3b7017f20085a3f4fcc785175969dab9c60b9e78f1a2e' 
 
@@ -16,8 +16,10 @@ dotenv.config({path:".env"});
              // forking: {
              // url: MAINNET_RPC_URL
              // }
+             allowUnlimitedContractSize: true
          },
          localhost: {
+            allowUnlimitedContractSize: true
          },
          Goerli: {
              url: RINKEBY_RPC_URL,
